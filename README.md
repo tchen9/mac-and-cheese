@@ -1,1 +1,1 @@
-# team-mac-and-cheese
+# mac-and-cheese
