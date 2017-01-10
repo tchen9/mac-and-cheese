@@ -5,7 +5,7 @@
 
 For our final project, we will be creating a casino where you start off with a set amount of money. With that money you can play games which costs money to play. You can either lose all your money you used or gain some money. When you are left with $0.00, the game is over and you’ve gone bankrupt. This employs superclasses, subclasses, interface, and abstract classes/methods.
 <br>(start with connect four and make our way down the list, may not get everything done)
-<br><b>Goal: connect four, wheel of fortune, and blackjack</b> 
+<br><b>Goal: connect four, blackjack, and wheel of fortune</b> 
 <br>Minigames include:
 <br><br><b>Connect Four</b>
 <ul><li>Play against a computer as you strategically place your pieces, attempting to connect four of your pieces in any straight manner.</li>
@@ -28,4 +28,5 @@ For our final project, we will be creating a casino where you start off with a s
 <li>Your are dealt your cards, which are displayed in the terminal.  You also see one of the house’s cards.</li>
 <li>You have the option to hit or stay, attempting to reach 21 without going over</li>
 <li>After you have finished your moves, the computer deal goes</li>
-<li>Has a ‘deck’ array, uses that to simulate playing cards. Once a card is dealt, removed that particular card from the array.  The array does not distinguish between suites, as it doesn’t matter in blackjack</li></ul>
+<li>Has a ‘deck’ array, uses that to simulate playing cards. Once a card is dealt, removed that particular card from the array.  The array does not distinguish between suites, as it doesn’t matter in blackjack</li>
+<li>Includes object arrays, type casting, strings, and ints</li></ul>
