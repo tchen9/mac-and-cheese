@@ -1,0 +1,13 @@
+Mac and Cheese
+Tina Chen, Max Chan, Despoina Sparakis
+APCS1 pd1
+2017-01-10
+
+Work Progression (In order of importance):
+
+     1) Get Casino (driver) Working, with keybaord input [by 12th]
+     2) Write psuedo code for Connect4  [by 12th]
+     3) Finish (rough copy) Connect4 [by 17th]
+     4) Fix Connect4 [by 18th]
+     5) Attempt to write Blackjack code [??? (if time allows)]
+     6) Debug [???]
