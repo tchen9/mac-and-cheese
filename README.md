@@ -1,5 +1,3 @@
-	# mac-and-cheese
-
 <h2>Final Project Proposal</h2>
 <br><h3>Casino</h3>
 
