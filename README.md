@@ -7,7 +7,7 @@ For our final project, we will be creating a casino where you start off with a s
 <br>(start with connect four and make our way down the list, may not get everything done)
 <br>Goal: connect four, wheel of fortune, and blackjack 
 Minigames include:
-<br>Connect Four
+<br><br>Connect Four
 <ul><li>Play against a computer as you strategically place your pieces, attempting to connect four of your pieces in any straight manner.</li>
 <li>There will be a board set up with labeled positions. </li>
 <li>User chooses where to place piece of choice.</li>
