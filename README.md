@@ -1,12 +1,12 @@
 	# mac-and-cheese
 
-Final Project Proposal
-<br>Casino
+<h2>Final Project Proposal</h2>
+<br><h3>Casino</h3>
 
 For our final project, we will be creating a casino where you start off with a set amount of money. With that money you can play games which costs money to play. You can either lose all your money you used or gain some money. When you are left with $0.00, the game is over and you’ve gone bankrupt. This employs superclasses, subclasses, interface, and abstract classes/methods.
 <br>(start with connect four and make our way down the list, may not get everything done)
 <br><b>Goal: connect four, wheel of fortune, and blackjack</b> 
-Minigames include:
+<br>Minigames include:
 <br><br><b>Connect Four</b>
 <ul><li>Play against a computer as you strategically place your pieces, attempting to connect four of your pieces in any straight manner.</li>
 <li>There will be a board set up with labeled positions. </li>
