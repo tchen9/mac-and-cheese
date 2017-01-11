@@ -22,4 +22,9 @@ public class ConnectFour{
 	}
     }
 
+    private int[] place(int column){
+	int r = 0;
+	
+    }
+
 }
