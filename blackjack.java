@@ -5,14 +5,22 @@ public class blackjack{
     private String dealerHand;
     private int playCount;
     private String playerHand;
-    public static ArrayList deck;
 
-    public blackjack(){
+    ArrayList<Object> deck = new ArrayList();
+
+
+    public ArrayList<Object> createDeck(){
 	for (int x = 2; x < 11; x++){
-	    for (int y = 0; y < 4; x++){
+	    for (int y = 0; y < 4; y++){
 		deck.add(x);
 		//System.out.println(deck);
-		    }
+	    }
+	}
+	for (int z = 0; z < 4; z++){
+	    deck.add("King");
+	    deck.add("Queen");
+	    deck.add("Jack");
+	    deck.add("Ace");
 	}
     }
 	
@@ -27,6 +35,6 @@ public class blackjack{
 	String s = "BLACKJACK";
 	System.out.println(s);
 	blackjack Frank = new blackjack();
-	System.out.println(deck);
+	System.out.println(Frank.deck);
     }
 }
