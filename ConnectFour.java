@@ -1,8 +1,9 @@
 public class ConnectFour{
 
     private int[][] Playboard = new int[6][7];
-	private boolean Victory;
+    private boolean Victory;
     private int[] Available = new int[6];
+    private String winner = "";
 
     public void  connectFour(){
 	for(int[] q: Playboard){
