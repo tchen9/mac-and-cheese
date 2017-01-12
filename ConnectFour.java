@@ -32,21 +32,21 @@ public class ConnectFour{
     }
 	
     private int[] place(int column){
-		int[] answer = new int[2];
-		int r = 0;
-		while(Playboard[r][column] == 0){
-			r++;
-		}
-		if(Playboard[0][column] != 0){
-			answer[0] = -1;
-			answer[1] = -1;
-		}
-		else{
-			Playboard[r - 1][column] = 1;
-			answer[0] = r - 1;
-			answer[1] = column;
-		}
-		return answer;
+        int[] answer = new int[2];
+	int r = 0;
+	while(r < 7 && Playboard[column][r] == 0){
+	    r++;
+	}
+	if(Playboard[column][0] != 0  ){
+	    answer[0] = -1;
+	    answer[1] = -1;
+	}
+	else{
+	    Playboard[column][r-1] = 1;
+	    answer[0] = column;
+	    answer[1] = r;
+	}
+	return answer;
     }
 	
 	public static String toString(int[] intArray){
@@ -61,8 +61,11 @@ public class ConnectFour{
     public static void main(String[] args){
 	ConnectFour game = new ConnectFour();
 	System.out.println(game);
-	game.place(1);
-	System.out.println(game.Playboard);
+	for(int x = 0; x < 8; x++){
+	game.place(5);
+	System.out.println(game);
+	}
+
     }
 
 }
