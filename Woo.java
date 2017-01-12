@@ -5,6 +5,7 @@ public class Woo{
 
     private double balance;
     private int gameType;
+    private double bet;
     
     public void play(){
 	String s = "";
@@ -20,7 +21,12 @@ public class Woo{
 	s += "Pick the number of the game you want to play. \n";
 	System.out.println(s);
 	gameType = Keyboard.readInt();
-	if (gameType == 1){
+	s = "How much do you want to bet? (ex: 3.00)";
+	System.out.println(s);
+	bet = Keyboard.readDouble();
+	s = "You will now start the game.";
+	System.out.println(s);
+	/*if (gameType == 1){
 	    ConnectFour.play();
 	}
 	else if (gameType == 2){
@@ -28,7 +34,17 @@ public class Woo{
 	}
 	else if (gameType == 3){
 	    HighLow.play();
-	}
+	    }*/
+    }
+
+    public void loseMoney(){
+	balance -= bet;
+    }
+    public void winMoney(){
+	balance += bet;
+    }
+    public boolean checkBalance(){
+	return true;
     }
 
     public static void main(String[] args){
