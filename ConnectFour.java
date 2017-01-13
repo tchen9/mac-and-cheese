@@ -65,6 +65,10 @@ public class ConnectFour{
 	this.place(y, 2);
     }
 	
+	public static boolean play(){
+		return false;
+	}
+	
 	public boolean isGameOver(){
 		boolean answer = false;
 		for(int[] q: Playboard){ //Tests columns
