@@ -32,7 +32,7 @@ public class Woo{
 	s = "You will now start the game.";
 	System.out.println(s);
 	if (gameType == 1){
-	    if (ConnectFour.play()){
+       	    if (ConnectFour.play()){
 		winMoney();	
 	    }
 	    else {

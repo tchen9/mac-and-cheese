@@ -2,7 +2,7 @@ import cs1.Keyboard;
 
 public class ConnectFour{
 
-    private int[][] Playboard = new int[6][7];
+    private static int[][] Playboard = new int[6][7];
 //	private int[][] Playboard = { {1, 0, 0, 0, 0, 0, 6}, {0, 1, 0, 0, 0, 2, 9}, {0, 0, 1, 0, 6, 5, 6}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 4, 8, 3, 4, 5, 6} };
     private boolean Victory = false;
     private int[] Available = new int[6];
@@ -52,7 +52,20 @@ public class ConnectFour{
 	}
 	return answer;
     }
-	
+    
+    public String toString(int[][] board){
+	return "0 0 0 0 0 0 0\n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0\n0 0 0 0 0 0 0";
+	/*String s = "";
+	for (int x = 0; x < board.length; x ++){
+	    for (int y = 0; y < board[0].length; y ++){
+		s += board[x][y];
+		s += "  ";
+	    }
+	    s += "\n";
+	}
+	return s;*/
+    }
+
     public static String toString(int[] intArray){
 		String answer = "[";
 		for( int r: intArray){
@@ -68,7 +81,8 @@ public class ConnectFour{
     }
 	
 	public static boolean play(){
-		return false;
+	    System.out.println("0 0 0 0 0 0 0\n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0\n0 0 0 0 0 0 0");
+	    return true;
 	}
 	
 	public static boolean play(int x){
