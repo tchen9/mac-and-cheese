@@ -54,8 +54,7 @@ public class ConnectFour{
     }
     
     public String toString(int[][] board){
-	return "0 0 0 0 0 0 0\n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0\n0 0 0 0 0 0 0";
-	/*String s = "";
+	String s = "";
 	for (int x = 0; x < board.length; x ++){
 	    for (int y = 0; y < board[0].length; y ++){
 		s += board[x][y];
@@ -63,7 +62,7 @@ public class ConnectFour{
 	    }
 	    s += "\n";
 	}
-	return s;*/
+	return s;
     }
 
     public static String toString(int[] intArray){
@@ -80,7 +79,7 @@ public class ConnectFour{
 	this.place(y, 2);
     }
 	
-	public static boolean play(){
+/*	public static boolean play(){
 	    System.out.println("0 0 0 0 0 0 0\n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0\n0 0 0 0 0 0 0");
 	     if (Math.random() > 0.5) {
             System.out.println("Congradulations! You won!!");
@@ -91,9 +90,9 @@ public class ConnectFour{
             System.out.println("Sorry! You lost!!");
             return false;
         }
-	}
+	}*/
 	
-	public static boolean play(int x){
+	public static boolean play(){
 		System.out.println("You are 1, the computer is 2");
 		ConnectFour pencil = new ConnectFour();
 		while(pencil.Victory == false){
@@ -107,11 +106,24 @@ public class ConnectFour{
 		System.out.println("The winner is " );
 		System.out.println(pencil.winner);
 		if(pencil.winner == 1){
+			pencil.wipe();
 			return true;
 		}
 		else{
+			pencil.wipe();
 			return false;
 		}
+	}
+	
+	public void wipe(){
+		for(int[] q: Playboard){
+			for(int r: q){
+			r = 0;
+	    }
+		}
+		Victory = false;
+		Available = new int[6];
+		winner = 0;
 	}
 	
 	public boolean isGameOver(){
@@ -164,7 +176,7 @@ public class ConnectFour{
 	}
 
     public static void main(String[] args){
-		System.out.println(play(5));
+		//System.out.println(play(5));
     }
 
 
