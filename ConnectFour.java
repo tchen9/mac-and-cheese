@@ -1,8 +1,10 @@
+import cs1.Keyboard;
+
 public class ConnectFour{
 
-//    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {1, 0, 0, 0, 0, 0, 6}, {0, 1, 0, 0, 0, 2, 9}, {0, 0, 1, 0, 6, 5, 6}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 4, 8, 3, 4, 5, 6} };
-    private boolean Victory;
+    private int[][] Playboard = new int[6][7];
+//	private int[][] Playboard = { {1, 0, 0, 0, 0, 0, 6}, {0, 1, 0, 0, 0, 2, 9}, {0, 0, 1, 0, 6, 5, 6}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 4, 8, 3, 4, 5, 6} };
+    private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
 
@@ -69,6 +71,27 @@ public class ConnectFour{
 		return false;
 	}
 	
+	public static boolean play(int x){
+		System.out.println("You are 1, the computer is 2");
+		ConnectFour pencil = new ConnectFour();
+		while(pencil.Victory == false){
+			System.out.println("Pick the Column (starting from 0)");
+			int choice = Keyboard.readInt();
+			pencil.place(choice, 1);
+			pencil.computerMove();
+			System.out.println(pencil);
+			pencil.isGameOver();
+		}
+		System.out.println("The winner is " );
+		System.out.println(pencil.winner);
+		if(pencil.winner == 1){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	
 	public boolean isGameOver(){
 		boolean answer = false;
 		for(int[] q: Playboard){ //Tests columns
@@ -119,18 +142,7 @@ public class ConnectFour{
 	}
 
     public static void main(String[] args){
-	ConnectFour game = new ConnectFour();
-	System.out.println(game);
-/*	game.place(5, 2);
-	game.place(4, 2);
-	game.place(3, 2);
-	game.place(2, 2);
-	game.place(5, 1);
-	game.place(5, 1);
-	game.place(5, 1);
-	System.out.println(game);
-	System.out.println(game.isGameOver());*/
-	System.out.println(game.isGameOver());
+		System.out.println(play(5));
     }
 
 
