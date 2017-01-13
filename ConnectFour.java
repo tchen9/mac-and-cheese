@@ -82,7 +82,15 @@ public class ConnectFour{
 	
 	public static boolean play(){
 	    System.out.println("0 0 0 0 0 0 0\n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0\n0 0 0 0 0 0 0");
-	    return true;
+	     if (Math.random() > 0.5) {
+            System.out.println("Congradulations! You won!!");
+            return true;
+            
+        }
+        else{
+            System.out.println("Sorry! You lost!!");
+            return false;
+        }
 	}
 	
 	public static boolean play(int x){

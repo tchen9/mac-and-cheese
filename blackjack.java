@@ -30,8 +30,15 @@ public class blackjack{
         s += ", ";
         s += "UNKNOWN";
         System.out.println(s);
-	    System.out.println("Congradulations! You won!!");
-	    return true;
+	    if (Math.random() > 0.5) {
+            System.out.println("Congradulations! You won!!");
+            return true;
+            
+        }
+        else{
+            System.out.println("Sorry! You lost!!");
+            return false;
+        }
     }
 
     public Object pickcard(){
