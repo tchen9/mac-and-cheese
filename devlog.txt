@@ -80,7 +80,7 @@ Despoina :: started the base of the connect 4 file
 2017-01-12
 --------------------------------------------------------------
 Tina :: finished up basic driver file
-Max: finish basic black jack
+Max: finish basic black jack, debuged driver file, created highlow
 Despoina :: finish basic connectfour
 ==============================================================
 
