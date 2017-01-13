@@ -1,9 +1,10 @@
 public class ConnectFour{
 
-    private int[][] Playboard = new int[6][7];
+//    private int[][] Playboard = new int[6][7];
+	private int[][] Playboard = { {1, 0, 0, 0, 0, 0, 6}, {0, 1, 0, 0, 0, 2, 9}, {0, 0, 1, 0, 6, 5, 6}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 4, 8, 3, 4, 5, 6} };
     private boolean Victory;
     private int[] Available = new int[6];
-    private String winner = "";
+    private int winner = 0;
 
     public void  connectFour(){
 	for(int[] q: Playboard){
@@ -63,17 +64,69 @@ public class ConnectFour{
 	int y = (int) (Math.random() * 6);
 	this.place(y, 2);
     }
+	
+	public boolean isGameOver(){
+		boolean answer = false;
+		for(int[] q: Playboard){ //Tests columns
+			for(int x = 0; x < 4; x++){
+				if(q[x] != 0 && q[x]==q[x+1] && q[x]==q[x+2] && q[x]==q[x+3]){
+					answer = true;
+					Victory = true;
+					winner = q[x];
+				}
+			}
+		}
+		
+		
+		for(int q = 0; q < 3; q++){//Row win
+			for(int x = 0; x<7; x++){
+				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x] && Playboard[q][x]==Playboard[q+2][x] && Playboard[q][x]==Playboard[q+3][x]){
+					answer = true;
+					Victory = true;
+					winner = Playboard[q][x];
+				}
+			}
+			
+		}
+		
+		for(int q = 0; q < 3; q++){//Diagonal up
+			for(int x = 6; x > 2; x-- ){
+				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x-1] && Playboard[q][x]==Playboard[q+2][x-2] && Playboard[q][x]==Playboard[q+3][x-3]){
+					answer = true;
+					Victory = true;
+					winner = Playboard[q][x];
+				}
+			}
+		}
+		
+		for(int q = 0; q < 3; q++){//Diagonal down
+			for(int x = 0; x < 4; x++){
+				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x+1] &&Playboard[q][x]==Playboard[q+2][x+2] && Playboard[q][x]==Playboard[q+3][x+3]){
+					answer = true;
+					Victory = true;
+					winner = Playboard[q][x];
+				}
+			}
+		}
+		
+		
+		
+		return answer;
+	}
 
     public static void main(String[] args){
 	ConnectFour game = new ConnectFour();
 	System.out.println(game);
-	game.computerMove();
+/*	game.place(5, 2);
+	game.place(4, 2);
+	game.place(3, 2);
+	game.place(2, 2);
+	game.place(5, 1);
+	game.place(5, 1);
+	game.place(5, 1);
 	System.out.println(game);
-	for(int x = 0; x < 10; x++){
-	    game.computerMove();
-	    System.out.println(game);
-	}
-
+	System.out.println(game.isGameOver());*/
+	System.out.println(game.isGameOver());
     }
 
 
