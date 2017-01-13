@@ -7,9 +7,13 @@ public class blackjack{
     private String playerHand;
 
     ArrayList<Object> deck = new ArrayList();
+    
+    public static boolean play(){
+	System.out.println("Congradulations! You won!!");
+	return true;
+    }
 
-
-    public ArrayList<Object> createDeck(){
+    public void createDeck(){
 	for (int x = 2; x < 11; x++){
 	    for (int y = 0; y < 4; y++){
 		deck.add(x);
