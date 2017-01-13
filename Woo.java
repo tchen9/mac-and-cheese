@@ -24,27 +24,95 @@ public class Woo{
 	s = "How much do you want to bet? (ex: 3.00)";
 	System.out.println(s);
 	bet = Keyboard.readDouble();
+	if (bet > balance){
+	    System.out.println("You don't have enough money. Enter another number.");
+	    bet = Keyboard.readDouble();
+	}
 	s = "You will now start the game.";
 	System.out.println(s);
-	/*if (gameType == 1){
-	    ConnectFour.play();
+	if (gameType == 1){
+	    if (ConnectFour.play()){
+		winMoney();	
+	    }
+	    else {
+		loseMoney();
+	    }
 	}
 	else if (gameType == 2){
-	    blackjack.play();
+	    if (blackjack.play()){
+		winMoney();
+	    }
+	    else {
+		loseMoney();
+	    }
+	}
+	/*else if (gameType == 3){
+	    if (HighLow.play()){
+		winMoney();
+	    }
+	    else{
+		loseMoney();
+	    }
+	    }*/
+        if (balance > 0.0){
+	    replay();
+	}
+	else{
+	    System.out.println("You've gone bankrupt!!!");
+	}
+    }
+
+    public void replay(){
+	s += "Pick the number of the game you want to play. \n";
+	System.out.println(s);
+	gameType = Keyboard.readInt();
+	s = "How much do you want to bet? (ex: 3.00)";
+	System.out.println(s);
+	bet = Keyboard.readDouble();
+	if (bet > balance){
+	    System.out.println("You don't have enough money. Enter another number.");
+	    bet = Keyboard.readDouble();
+	}
+	s = "You will now start the game.";
+	System.out.println(s);
+	if (gameType == 1){
+	    if (ConnectFour.play()){
+		winMoney();	
+	    }
+	    else {
+		loseMoney();
+	    }
+	}
+	else if (gameType == 2){
+	    if (blackjack.play()){
+		winMoney();
+	    }
+	    else {
+		loseMoney();
+	    }
 	}
 	else if (gameType == 3){
-	    HighLow.play();
-	    }*/
+	    if (HighLow.play()){
+		winMoney();
+	    }
+	    else{
+		loseMoney();
+	    }
+	}
+        if (balance > 0.0){
+	    replay();
+	}
+	else{
+	    System.out.println("You've gone bankrupt!!!");
+	}
     }
 
     public void loseMoney(){
 	balance -= bet;
     }
+    
     public void winMoney(){
 	balance += bet;
-    }
-    public boolean checkBalance(){
-	return true;
     }
 
     public static void main(String[] args){
