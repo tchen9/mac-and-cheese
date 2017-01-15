@@ -11,10 +11,9 @@ public class blackjack{
     
     ArrayList<Object> deck = new ArrayList();
     
-    public static boolean play(){
+    public static String play(){
         blackjack bob = new blackjack();
-        bob.playHelp();
-        return true;
+        return bob.playHelp();
     }
     
     public String playHelp(){

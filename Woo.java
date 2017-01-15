@@ -17,7 +17,7 @@ public class Woo{
 	s += "Desciption:\n";
 	s += "1. Connect 4: Play against the computer and try to get four in a row.Your pieces will be 1's and the computer's pieces will be 8's.\n";
 	s += "2. Black Jack: You will get 2 cards and an option to get another card. The computer will also get 2 cards and if there cards are below 16 they have to draw another one. Whoever has cards closest to 21 will win.\n";
-	s += "3. HighLow: You each get two cards, but you don't see your card. You can only see the computer card. You bet how ever much money you want for who has the higher card.\n";
+	s += "3. HighLow: You each get a card, but you don't see the dealer's card. You can only see your card. You bet how ever much money you want for who has the higher card.\n";
 	System.out.println(s);
 	s = "Pick the number of the game you want to play. \n";
 	System.out.println(s);
@@ -25,7 +25,7 @@ public class Woo{
 	s = "\nHow much do you want to bet? (ex: 3.00)";
 	System.out.println(s);
 	bet = Keyboard.readDouble();
-	if (bet > balance){
+	while (bet > balance){
 	    System.out.println("You don't have enough money. Enter another number.");
 	    bet = Keyboard.readDouble();
 	}
@@ -40,22 +40,30 @@ public class Woo{
 	    }
 	}
 	else if (gameType == 2){
-	    if (blackjack.play()){
+	    if (blackjack.play() == "Win"){
 		winMoney();
 	    }
+	    else if (blackjack.play() == "Draw"){
+		System.out.println("Since it's a draw, you don't get any money.");
+	    }
+	    else if (blackjack.play() == "Blackjack"){
+		winMoney();
+		winMoney();
+		}
 	    else {
 		loseMoney();
 	    }
 	}
-	/*else if (gameType == 3){
+	else if (gameType == 3){
 	    if (HighLow.play()){
 		winMoney();
 	    }
 	    else{
 		loseMoney();
 	    }
-	    }*/
-        if (balance > 0.0){
+	    }
+        if (balance ==  0.0){
+	    System.out.println("Your current balance is $" + balance + ".");
 	    replay();
 	}
 	else{
@@ -86,9 +94,16 @@ public class Woo{
 	    }
 	}
 	else if (gameType == 2){
-	    if (blackjack.play()){
+	    if (blackjack.play() == "Win"){
 		winMoney();
 	    }
+	    else if (blackjack.play() == "Draw"){
+		System.out.println("Since it's a draw, you don't get any money.");
+	    }
+	    else if (blackjack.play() == "Blackjack"){
+		winMoney();
+		winMoney();
+		}
 	    else {
 		loseMoney();
 	    }
