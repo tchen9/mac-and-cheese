@@ -45,6 +45,10 @@ public class blackjack{
                 System.out.println("Sorry, you lose! Game Over…");
                 return "Lose";
             }
+            if (playerHand.size() > 4){
+                System.out.println("Congratulations!! You win!");
+                return "Win";
+            }
             else{
                 s = "Do you want to hit again? (Enter h for hit, s for stay)";
                 System.out.println(s);
@@ -59,8 +63,12 @@ public class blackjack{
         s = "Your cards add up to ";
         System.out.print(s);
         System.out.println(playerCount);
+        if (blackjack(playerHand)){
+            System.out.println("Congratulations!! You got a blackjack!");
+            return "Blackjack";
+        }
         
-        System.out.println("Dealer's turn . . .");
+        System.out.println("\nDealer's turn . . .");
         
         while (dealerCount <= 16){
             s = "\nDealer's hand is " + dealerHand;
@@ -68,7 +76,9 @@ public class blackjack{
             dealerHit();
         }
         
-        s = "Your Hand: ";
+        
+        s = "==========================================================\nReults:\n\n";
+        s += "Your Hand: ";
         System.out.print(s);
         System.out.println(playerHand);
         s = "Your cards add up to ";
@@ -113,6 +123,10 @@ public class blackjack{
         return thing;
     }
     
+    public boolean blackjack(ArrayList thing){
+        return (thing.get(0) == "Ace" || thing.get(1) == "Ace") && (thing.get(0) == "King" || thing.get(0) == "Queen" || thing.get(0) == "Jack" || thing.get(0).equals(10) || thing.get(1) == "King" || thing.get(1) == "Queen" || thing.get(1) == "Jack" || thing.get(1).equals(10));
+    }
+    
     public void createDeck(){
         for (int x = 2; x < 11; x++){
             for (int y = 0; y < 4; y++){
@@ -136,7 +150,8 @@ public class blackjack{
             }
             else{
                 if (x.equals("Ace")){
-                    counter += 1;
+                    System.out.println("Do you want your Ace to be 11 or 1?");
+                    counter += Keyboard.readInt();
                 }
                 else{
                     counter += 10;
@@ -169,9 +184,9 @@ public class blackjack{
     
     public static void dealerMove(){}
     
-    /*public static void main(String[] args){
+    public static void main(String[] args){
         blackjack Frank = new blackjack();
         Frank.playHelp();
-    }*/
+    }
 
 }
