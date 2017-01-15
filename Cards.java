@@ -1,6 +1,8 @@
+import java.util.ArrayList;
+
 public class Cards{
     
-    public ArrayList<Object> deck = new ArrayList();
+    protected ArrayList<Object> deck = new ArrayList();
     
     public void createDeck(){
         for (int x = 2; x < 11; x++){
