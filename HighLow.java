@@ -26,7 +26,7 @@ public class HighLow extends Cards{
 	bet = Keyboard.readInt();
 
 	System.out.println("The dealer's card is " + dealerCard + ".");
-	cardCount();
+	countCards();
 	
 	//System.out.println(dealerCard);
 	//System.out.println(playerCard);
@@ -55,7 +55,7 @@ public class HighLow extends Cards{
 	}	    
     }
 
-    public void cardCount(){
+    public void countCards(){
 
         //changes the cards that are words to numbers
 
