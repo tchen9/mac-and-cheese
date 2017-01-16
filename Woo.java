@@ -61,8 +61,8 @@ public class Woo{
 	    else{
 		loseMoney();
 	    }
-	    }
-        if (balance ==  0.0){
+        }
+        if (balance > 0.0){
 	    System.out.println("Your current balance is $" + balance + ".");
 	    replay();
 	}

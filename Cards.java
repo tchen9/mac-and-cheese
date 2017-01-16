@@ -1,6 +1,7 @@
 import java.util.ArrayList;
+import cs1.Keyboard;
 
-public class Cards{
+public abstract class Cards{
     
     protected ArrayList<Object> deck = new ArrayList();
     
@@ -18,4 +19,6 @@ public class Cards{
             deck.add("Ace");
         }
     }
+
+    public abstract void cardCount();
 }

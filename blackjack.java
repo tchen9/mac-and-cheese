@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import cs1.Keyboard;
 
-public class blackjack{
+public class blackjack extends Cards{
     private int dealerCount;
     private ArrayList dealerHand = new ArrayList();
     private int playerCount;
