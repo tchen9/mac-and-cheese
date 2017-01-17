@@ -58,7 +58,7 @@ public class HighLow extends Cards{
     public void countCards(){
 
         //changes the cards that are words to numbers
-
+	
 	if (dealerCard.equals("King")){
 	    dealerCard = 13;
 	}

@@ -20,5 +20,5 @@ public abstract class Cards{
         }
     }
 
-    public abstract int countCards();
+
 }

@@ -2,7 +2,7 @@ import cs1.Keyboard;
 
 public class ConnectFour{
 
-    private static int[][] Playboard = new int[6][7];
+    private int[][] Playboard = new int[6][7];
 //	private int[][] Playboard = { {1, 0, 0, 0, 0, 0, 6}, {0, 1, 0, 0, 0, 2, 9}, {0, 0, 1, 0, 6, 5, 6}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 4, 8, 3, 4, 5, 6} };
     private boolean Victory = false;
     private int[] Available = new int[6];
