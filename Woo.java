@@ -40,13 +40,15 @@ public class Woo{
 	    }
 	}
 	else if (gameType == 2){
-	    if (blackjack.play() == "Win"){
+	    String thing;
+	    thing = blackjack.play();
+	    if (thing == "Win"){
 		winMoney();
 	    }
-	    else if (blackjack.play() == "Draw"){
+	    else if (thing == "Draw"){
 		System.out.println("Since it's a draw, you don't get any money.");
 	    }
-	    else if (blackjack.play() == "Blackjack"){
+	    else if (thing == "Blackjack"){
 		winMoney();
 		winMoney();
 		}
@@ -73,9 +75,14 @@ public class Woo{
 
     public void replay(){
 	String s;
-	s = "Pick the number of the game you want to play. \n";
+	s = "Pick the number of the game you want to play. (Or press 0 to leave the Casino)\n";
 	System.out.println(s);
 	gameType = Keyboard.readInt();
+	if (gameType == 0){
+	    System.out.println("Your current balance is $" + balance + ".");
+	    System.out.println("Thanks for playing! Come back soon!");
+	    System.exit(0);
+	}
 	s = "How much do you want to bet? (ex: 3.00)";
 	System.out.println(s);
 	bet = Keyboard.readDouble();

@@ -1,7 +1,7 @@
 <h2>Casino Mac and Cheese</h2>
 
 <h3>Launch Instructions</h3><br>
-<t>To start, open this directory in a terminal window.  Enter ~$ javac Woo.java and then ~$ java Woo<br>
+<t>To start, clone this repo into a new directory. Open this directory, then enter ~$ javac Woo.java and then ~$ java Woo<br>
 
 <h3>Description</h3><br>
 <t>Welcome to the Casino Mac and Cheese! When prompted, enter the amount of money you would like to start with, then pick from our variety of games!<br>

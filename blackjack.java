@@ -183,9 +183,9 @@ public class blackjack extends Cards{
     
     public static void dealerMove(){}
     
-    public static void main(String[] args){
+    /*public static void main(String[] args){
         blackjack Frank = new blackjack();
         Frank.playHelp();
-    }
+	}*/
 
 }
