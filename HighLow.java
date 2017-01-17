@@ -21,8 +21,9 @@ public class HighLow extends Cards{
 	
 	System.out.println("Your card is " + playerCard + ".");
 	System.out.println("Choose the number of who you think has the higher card.");
-	System.out.println("1. Dealer");
-	System.out.println("2. You.");
+	System.out.println("1. Tie");
+	System.out.println("2. Dealer.");
+	System.out.println("3. You.");
 	bet = Keyboard.readInt();
 
 	System.out.println("The dealer's card is " + dealerCard + ".");
@@ -30,10 +31,16 @@ public class HighLow extends Cards{
 	
 	//System.out.println(dealerCard);
 	//System.out.println(playerCard);
-	
+
 	int maxCard = Math.max((int)dealerCard, (int)playerCard);
 
 	if (bet == 1){
+	    if ((int)dealerCard == (int)playerCard){
+		System.out.println("It was a tie!!!"); 
+		return true;
+	    }
+	}
+	if (bet == 2){
 	    if ( maxCard == (int)dealerCard){
 		System.out.println("You won!!");
 		return true;

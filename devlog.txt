@@ -45,6 +45,7 @@ we changed ___ to ___ bc...
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
+max method
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -84,17 +85,26 @@ Max: finish basic black jack, debuged driver file, created highlow
 Despoina :: finish basic connectfour
 ==============================================================
 
-2017-01-13
---------------------------------------------------------------
-
-==============================================================
-
 2017-01-14
 --------------------------------------------------------------
-
+Despoina :: Tried to make connect four run, but there are some issues. 
 ==============================================================
 
 2017-01-15
+--------------------------------------------------------------
+Tina :: Started and finished HighLow.java, incorporated superclasses and subclasses with Cards.java, HighLow.java, blackjack.java.
+Max :: 
+==============================================================
+
+2017-01-17
+--------------------------------------------------------------
+All :: debug error of static and instance variables in connnectfour
+Max :: updated readme
+Despoina :: working on connectfour
+Tina :: update devlog, added tie case to highlow  
+==============================================================
+
+2017-01-18
 --------------------------------------------------------------
 
 ==============================================================
