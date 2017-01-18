@@ -15,6 +15,8 @@ public class ConnectFour{
 	    }
 	}
     }
+
+
 	
 	public void populate(){
 		for(int r = 0; r < 6; r++){
@@ -79,29 +81,27 @@ public class ConnectFour{
 	this.place(y, 2);
     }
 	
-/*	public static boolean play(){
-	    System.out.println("0 0 0 0 0 0 0\n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0 \n0 0 0 0 0 0 0\n0 0 0 0 0 0 0");
-	     if (Math.random() > 0.5) {
-            System.out.println("Congradulations! You won!!");
-            return true;
-            
-        }
-        else{
-            System.out.println("Sorry! You lost!!");
-            return false;
-        }
-	}*/
+
 	
 	public static boolean play(){
 		System.out.println("You are 1, the computer is 2");
 		ConnectFour pencil = new ConnectFour();
+		String turn = "1";
 		while(pencil.Victory == false){
+		    if(turn == "1"){
 			System.out.println("Pick the Column (starting from 0)");
 			int choice = Keyboard.readInt();
 			pencil.place(choice, 1);
+			System.out.println(pencil);
+			pencil.isGameOver();
+			turn = "2";
+		    }
+		    else{
 			pencil.computerMove();
 			System.out.println(pencil);
 			pencil.isGameOver();
+			turn = "1";
+		    }
 		}
 		System.out.println("The winner is " );
 		System.out.println(pencil.winner);
@@ -176,7 +176,8 @@ public class ConnectFour{
 	}
 
     public static void main(String[] args){
-		//System.out.println(play(5));
+
+    
     }
 
 
