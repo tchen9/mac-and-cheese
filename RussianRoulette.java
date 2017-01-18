@@ -12,7 +12,7 @@ public class RussianRoulette{
 	    return true;
 	}
 	else{
-	    System.out.println("Sorry, you died. Game Over! Come back another lfie");
+	    System.out.println("Sorry, you died. Game Over! Come back another life");
 	    return false;
 	}
     }
