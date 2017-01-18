@@ -40,7 +40,7 @@ public class HighLow extends Cards{
 		return true;
 	    }
 	}
-	else if (bet == 2){
+	if (bet == 2){
 	    if ( maxCard == (int)dealerCard){
 		System.out.println("You won!!");
 		return true;
