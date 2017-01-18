@@ -115,7 +115,7 @@ Max:: Updated README, modified Woo so that user can leave Casino before being ba
 ==============================================================
 2017-01-18
 --------------------------------------------------------------
-
+Max:: Updated Woo.java, updated README, created RussianRoulette and finished, finished blackjack
 ==============================================================
 2017-01-19
 --------------------------------------------------------------
