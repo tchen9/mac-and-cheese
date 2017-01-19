@@ -3,7 +3,7 @@ import cs1.Keyboard;
 public class ConnectFour{
 
 //    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {0, 0, 0, 0, 0, 0, 1}, {0, 1, 0, 0, 0, 2, 1}, {0, 0, 1, 0, 6, 5, 0}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 1, 1, 0, 0, 0, 0} };
+	private int[][] Playboard = { {0, 0, 0, 0, 2, 1, 1}, {0, 1, 0, 0, 0, 2, 1}, {0, 0, 1, 0, 6, 5, 0}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 0, 0, 0} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -198,7 +198,7 @@ public class ConnectFour{
     public int findTwo(){
 	int twoInARow = -1;
 	for(int x = 0; x < 6; x++){//Finds two in the same column
-	    for(int q = 0; q < 6; q++){
+	    for(int q = 0; q < 5; q++){
 		if(Playboard[x][q]!= 0 && Playboard[x][q]== Playboard[x][q+1] && Playboard[x][q+2]==0){
 		    twoInARow = x;
 		}
