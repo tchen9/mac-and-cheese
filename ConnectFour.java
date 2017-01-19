@@ -177,7 +177,7 @@ public class ConnectFour{
 
 	
 	
-	public int findThree(){
+	public int findThree(){//Doesn't work
 		int threeInARow = 0;
 		for (int x = 0; x < Playboard.length; x++){
 			for (int y = 0; y < Playboard[0].length; y++){
@@ -195,10 +195,57 @@ public class ConnectFour{
 		return 10;
     }
 	
+	public int findTwo(){
+		int answer = -1;
+		for(int[] q: Playboard){ //Tests columns
+			for(int x = 0; x < 4; x++){
+				if(q[x] != 0 && q[x]==q[x+1]){
+					answer = x;
+				}
+			}
+		}
+		
+		
+/*		for(int q = 0; q < 3; q++){//Row win
+			for(int x = 0; x<7; x++){
+				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x] && Playboard[q][x]==Playboard[q+2][x] && Playboard[q][x]==Playboard[q+3][x]){
+					answer = true;
+					Victory = true;
+					winner = Playboard[q][x];
+				}
+			}
+			
+		}
+		
+		for(int q = 0; q < 3; q++){//Diagonal up
+			for(int x = 6; x > 2; x-- ){
+				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x-1] && Playboard[q][x]==Playboard[q+2][x-2] && Playboard[q][x]==Playboard[q+3][x-3]){
+					answer = true;
+					Victory = true;
+					winner = Playboard[q][x];
+				}
+			}
+		}
+		
+		for(int q = 0; q < 3; q++){//Diagonal down
+			for(int x = 0; x < 4; x++){
+				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x+1] &&Playboard[q][x]==Playboard[q+2][x+2] && Playboard[q][x]==Playboard[q+3][x+3]){
+					answer = true;
+					Victory = true;
+					winner = Playboard[q][x];
+				}
+			}
+		}
+		
+		
+		*/
+		return answer;
+	}
+	
     public static void main(String[] args){
 		ConnectFour stuff = new ConnectFour();
 		System.out.println(stuff);
-		System.out.println(stuff.findThree());
+		System.out.println(stuff.findTwo());
     
     }
 
