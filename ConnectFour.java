@@ -3,7 +3,7 @@ import cs1.Keyboard;
 public class ConnectFour{
 
 //    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {0, 0, 0, 0, 0, 1, 1}, {0, 1, 0, 0, 0, 2, 9}, {0, 0, 1, 0, 6, 5, 6}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 1, 1, 0, 0, 0, 0} };
+	private int[][] Playboard = { {0, 0, 0, 0, 0, 0, 1}, {0, 1, 0, 0, 0, 2, 1}, {0, 0, 1, 0, 6, 5, 0}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 1, 1, 0, 0, 0, 0} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -204,16 +204,20 @@ public class ConnectFour{
 		}
 	    }
 	}
-	return twoInARow;
 
-	for(int x = 0; x < 5; x++){
+	/*for(int x = 0; x < 5; x++){
 	    for(int q = 0; q < 6; q++){
-		if(Playboard[x][q]!= 0 && Playboard[x][q]==Playboard[x+1][q] && Playboard[x+2][
+			if(Playboard[x][q]!= 0 && Playboard[x][q]==Playboard[x+1][q] && Playboard[x+2][q]){
+				if(x==0 && Playboard[x+3][q]==0 && Playboard[x+3][q+1] != 0){
+					twoInARow = x+3;
+				}
+			}
 		
 	    }
-	} 
+	} */
 
 
+	return twoInARow;
 
     }
 	
