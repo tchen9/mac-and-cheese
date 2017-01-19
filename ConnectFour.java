@@ -175,6 +175,26 @@ public class ConnectFour{
 		return answer;
 	}
 
+	
+	
+	public int findThree(){
+		int threeInARow = 0;
+		for (int x = 0; x < Playboard.length; x++){
+			for (int y = 0; y < Playboard[0].length; y++){
+				while (threeInARow != 3){
+					if (Playboard[x][y] == 1){
+					threeInARow++;
+					}
+				}
+				if (threeInARow == 3 && y < 5){
+					return y + 1; 
+				}
+			}
+			threeInARow = 0;
+		}
+		return 10;
+    }
+	
     public static void main(String[] args){
 
     
