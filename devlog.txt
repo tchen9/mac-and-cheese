@@ -85,6 +85,11 @@ Max: finish basic black jack, debuged driver file, created highlow
 Despoina :: finish basic connectfour
 ==============================================================
 
+2017-01-13
+--------------------------------------------------------------
+Max: Continued working blackjack, changed return type to String (as opposed to boolean), so that it could generate cases for win, lose, blackjack, push.
+==============================================================
+
 2017-01-14
 --------------------------------------------------------------
 Despoina :: Tried to make connect four run, but there are some issues. 
@@ -93,24 +98,15 @@ Despoina :: Tried to make connect four run, but there are some issues.
 2017-01-15
 --------------------------------------------------------------
 Tina :: Started and finished HighLow.java, incorporated superclasses and subclasses with Cards.java, HighLow.java, blackjack.java.
-Max :: 
+Max :: Dealing with Aces in Blackjack
 ==============================================================
 
 2017-01-17
 --------------------------------------------------------------
 All :: debug error of static and instance variables in connnectfour
-Max :: updated readme
+Max :: Updated README, modified Woo so that user can leave Casino before being bankrupt, fixed some things in blackjack
 Despoina :: working on connectfour
 Tina :: update devlog, added tie case to highlow  
-==============================================================
-
-2017-01-18
---------------------------------------------------------------
-
-==============================================================
-2017-01-17
---------------------------------------------------------------
-Max:: Updated README, modified Woo so that user can leave Casino before being bankrupt, fixed some things in blackjack
 
 ==============================================================
 2017-01-18
@@ -119,5 +115,6 @@ Max:: Updated Woo.java, updated README, created RussianRoulette and finished, fi
 ==============================================================
 2017-01-19
 --------------------------------------------------------------
+Max:: Started hangman, IS OPTION AT THIS TIME, DEPENDING ON WHETHER OR NOT CAN BE COMPLETED. 
 
 ==============================================================
