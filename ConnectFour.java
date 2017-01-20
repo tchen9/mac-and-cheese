@@ -3,7 +3,7 @@ import cs1.Keyboard;
 public class ConnectFour{
 
 //    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {0, 0, 0, 0, 2, 1, 1}, {0, 1, 0, 0, 0, 2, 1}, {0, 0, 1, 0, 6, 5, 0}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 0, 0, 0} };
+	private int[][] Playboard = { {2, 1, 1, 1, 0, 0, 1}, {0, 1, 0, 0, 0, 2, 1}, {0, 0, 1, 0, 6, 5, 0}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 2, 0, 2} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -195,6 +195,19 @@ public class ConnectFour{
 		return 10;
 		}*/
 
+    public int findThree(){
+	int threeInARow = -1;
+	for(int x = 0; x < 6; x++){
+	    for(int q = 6; q > 2; q--){
+		if(Playboard[x][q]!= 0 && Playboard[x][q]==Playboard[x][q-1] && Playboard[x][q]==Playboard[x][q-2]&&Playboard[x][q-3]==0){
+		    threeInARow = x;
+		}
+	    }
+	}
+	return threeInARow;
+    }
+
+
     public int findTwo(){
 	int twoInARow = -1;
 	for(int x = 0; x < 6; x++){//Finds two in the same column
@@ -226,7 +239,7 @@ public class ConnectFour{
     public static void main(String[] args){
 		ConnectFour stuff = new ConnectFour();
 		System.out.println(stuff);
-		System.out.println(stuff.findTwo());
+		System.out.println(stuff.findThree());
     
     }
 
