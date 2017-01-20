@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class ConnectFour{
 
 //    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {2, 1, 1, 1, 0, 0, 1}, {2, 1, 0, 0, 0, 2, 1}, {2, 0, 1, 0, 6, 5, 1}, {0, 0, 0, 1, 4, 5, 0}, {2, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 2, 0, 2} };
+	private int[][] Playboard = { {2, 1, 1, 1, 0, 0, 1}, {2, 1, 0, 0, 0, 2, 1}, {2, 0, 1, 0, 6, 5, 1}, {1, 1, 0, 1, 4, 5, 2}, {1, 1, 0, 0, 0, 0, 2}, {1, 1, 1, 0, 2, 0, 2} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -220,8 +220,25 @@ public class ConnectFour{
 
 	}
 
+	for(int q = 6; q > -1; q--){
+		if(Playboard[5][q]!=0 && Playboard[5][q]==Playboard[4][q] && Playboard[5][q]==Playboard[3][q] && Playboard[2][q]==0){
+			if(q==6){
+				threeInARow = 2;
+			}
+			else{
+				if(Playboard[2][q+1]!=0){
+					threeInARow = 2;
+				}
+			}
+		} 
+	}
 
-
+	
+	
+	
+	//Middle Row
+	
+	
 	return threeInARow;
     }
 
