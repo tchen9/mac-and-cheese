@@ -27,7 +27,8 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow we so BOSS bc...
+merging files in the command terminal
+creating a Cards.java and combining the classes
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -36,16 +37,18 @@ maybe some of these will move into the Obs.Ovrcm section...
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-wow! oo!...
+We learned how to read a text file from java code and how to set a timer.
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 
+We got rid of a lot of games in our casino, but we brought back russian rouletter and hangman because we had extra time. 
+
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 tales of wisdom gained...
-max method
+Planning is very important with flowcharts, uml diagrams, and keys to success. This saved a lot of time in writing the code because everything was planned out before.
 ||||||||||||||||||||||||||||||||||||||||||
 
 
@@ -82,12 +85,7 @@ Despoina :: started the base of the connect 4 file
 --------------------------------------------------------------
 Tina :: finished up basic driver file
 Max: finish basic black jack, debuged driver file, created highlow
-Despoina :: finish basic connectfour
-==============================================================
-
-2017-01-13
---------------------------------------------------------------
-Max: Continued working blackjack, changed return type to String (as opposed to boolean), so that it could generate cases for win, lose, blackjack, push.
+Despoina :: finish basic Connectfour
 ==============================================================
 
 2017-01-14
@@ -98,23 +96,33 @@ Despoina :: Tried to make connect four run, but there are some issues.
 2017-01-15
 --------------------------------------------------------------
 Tina :: Started and finished HighLow.java, incorporated superclasses and subclasses with Cards.java, HighLow.java, blackjack.java.
-Max :: Dealing with Aces in Blackjack
+Max :: dealing with aces in blackjack
 ==============================================================
 
 2017-01-17
 --------------------------------------------------------------
 All :: debug error of static and instance variables in connnectfour
-Max :: Updated README, modified Woo so that user can leave Casino before being bankrupt, fixed some things in blackjack
 Despoina :: working on connectfour
 Tina :: update devlog, added tie case to highlow  
-
+Max :: Updated README, modified Woo so that user can leave Casino before being bankrupt, fixed some things in blackjack
 ==============================================================
+
 2017-01-18
 --------------------------------------------------------------
-Max:: Updated Woo.java, updated README, created RussianRoulette and finished, finished blackjack
+Max :: Updated Woo.java, updated README, created RussianRoulette and finished, finished blackjack
+Tina :: Created findThree method in Connectfour.java.
+Despoina :: Worked on findTwo method in Connectfour.java.
 ==============================================================
+
 2017-01-19
 --------------------------------------------------------------
-Max:: Started hangman, IS OPTION AT THIS TIME, DEPENDING ON WHETHER OR NOT CAN BE COMPLETED. 
+Max :: Started hangman, is optional at this time depending on whether or not it can be completed.
+Tina :: updated devlog
+==============================================================
 
+2017-01-20
+--------------------------------------------------------------
+Tina :: update the flow.pdf
+Max :: update the uml.pdf
+Despoina :: finishing up ConnectFour
 ==============================================================
