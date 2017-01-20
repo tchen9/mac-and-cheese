@@ -1,9 +1,10 @@
 import cs1.Keyboard;
+import java.util.ArrayList;
 
 public class ConnectFour{
 
 //    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {2, 1, 1, 1, 0, 0, 1}, {0, 1, 0, 0, 0, 2, 1}, {0, 0, 1, 0, 6, 5, 0}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 2, 0, 2} };
+	private int[][] Playboard = { {2, 1, 1, 1, 0, 0, 1}, {2, 1, 0, 0, 0, 2, 1}, {2, 0, 1, 0, 6, 5, 1}, {0, 0, 0, 1, 4, 5, 0}, {2, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 2, 0, 2} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -15,7 +16,6 @@ public class ConnectFour{
 	    }
 	}
     }
-
 
 	
 	public void populate(){
@@ -204,6 +204,24 @@ public class ConnectFour{
 		}
 	    }
 	}
+
+	for(int q = 6; q > -1; q--){
+	    if(Playboard[0][q]!=0 && Playboard[1][q]==Playboard[0][q] && Playboard[0][q]==Playboard[2][q] && Playboard[3][q]==0){
+		if(q==6){
+		    threeInARow = 3;
+		}
+		else{
+		    if(Playboard[3][q+1]!=0){
+			threeInARow = 3;
+		    }
+		
+	    }
+	}
+
+	}
+
+
+
 	return threeInARow;
     }
 
