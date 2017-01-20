@@ -3,7 +3,7 @@ import cs1.Keyboard;
 public class ConnectFour{
 
 //    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {0, 0, 0, 0, 1, 1, 1}, {0, 1, 0, 0, 0, 2, 9}, {0, 0, 1, 0, 6, 5, 6}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 4, 8, 3, 4, 5, 6} };
+	private int[][] Playboard = { {0, 0, 0, 0, 2, 1, 1}, {0, 1, 0, 0, 0, 2, 1}, {0, 0, 1, 0, 6, 5, 0}, {0, 0, 0, 1, 4, 5, 6}, {2, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 0, 0, 0} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -177,7 +177,7 @@ public class ConnectFour{
 
 	
 	
-	public int findThree(){//Doesn't work
+    /*	public int findThree(){//Doesn't work
 		int threeInARow = 0;
 		for (int x = 0; x < Playboard.length; x++){
 			for (int y = 0; y < Playboard[0].length; y++){
@@ -193,54 +193,35 @@ public class ConnectFour{
 			threeInARow = 0;
 		}
 		return 10;
+		}*/
+
+    public int findTwo(){
+	int twoInARow = -1;
+	for(int x = 0; x < 6; x++){//Finds two in the same column
+	    for(int q = 0; q < 5; q++){
+		if(Playboard[x][q]!= 0 && Playboard[x][q]== Playboard[x][q+1] && Playboard[x][q+2]==0){
+		    twoInARow = x;
+		}
+	    }
+	}
+
+	/*for(int x = 0; x < 5; x++){
+	    for(int q = 0; q < 6; q++){
+			if(Playboard[x][q]!= 0 && Playboard[x][q]==Playboard[x+1][q] && Playboard[x+2][q]){
+				if(x==0 && Playboard[x+3][q]==0 && Playboard[x+3][q+1] != 0){
+					twoInARow = x+3;
+				}
+			}
+		
+	    }
+	} */
+
+
+	return twoInARow;
+
     }
 	
-	public int findTwo(){
-		int answer = -1;
-		for(int[] q: Playboard){ //Tests columns
-			for(int x = 0; x < 4; x++){
-				if(q[x] != 0 && q[x]==q[x+1]){
-					answer = x;
-				}
-			}
-		}
-		
-		
-/*		for(int q = 0; q < 3; q++){//Row win
-			for(int x = 0; x<7; x++){
-				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x] && Playboard[q][x]==Playboard[q+2][x] && Playboard[q][x]==Playboard[q+3][x]){
-					answer = true;
-					Victory = true;
-					winner = Playboard[q][x];
-				}
-			}
-			
-		}
-		
-		for(int q = 0; q < 3; q++){//Diagonal up
-			for(int x = 6; x > 2; x-- ){
-				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x-1] && Playboard[q][x]==Playboard[q+2][x-2] && Playboard[q][x]==Playboard[q+3][x-3]){
-					answer = true;
-					Victory = true;
-					winner = Playboard[q][x];
-				}
-			}
-		}
-		
-		for(int q = 0; q < 3; q++){//Diagonal down
-			for(int x = 0; x < 4; x++){
-				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x+1] &&Playboard[q][x]==Playboard[q+2][x+2] && Playboard[q][x]==Playboard[q+3][x+3]){
-					answer = true;
-					Victory = true;
-					winner = Playboard[q][x];
-				}
-			}
-		}
-		
-		
-		*/
-		return answer;
-	}
+
 	
     public static void main(String[] args){
 		ConnectFour stuff = new ConnectFour();
