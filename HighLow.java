@@ -39,8 +39,12 @@ public class HighLow extends Cards{
 		System.out.println("It was a tie!!!"); 
 		return true;
 	    }
+	    else{
+		System.out.println("It was not a tie.");
+		return false;
+	    }
 	}
-	if (bet == 2){
+	else if (bet == 2){
 	    if ( maxCard == (int)dealerCard){
 		System.out.println("You won!!");
 		return true;
@@ -59,7 +63,8 @@ public class HighLow extends Cards{
 		System.out.println("You lost :(");
 		return false;
 	    }
-	}	    
+	}
+	//return false;
     }
 
     public void countCards(){
