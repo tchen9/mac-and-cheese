@@ -102,7 +102,7 @@ public class ConnectFour{
 		String turn = "1";
 		while(pencil.Victory == false){
 		    if(turn == "1"){
-			System.out.println("Pick the Column (starting from 0)");
+			System.out.println("Pick the Column (starting from 0 up until 5)");
 			int choice = Keyboard.readInt();
 			pencil.place(choice, 1);
 			System.out.println(pencil);
