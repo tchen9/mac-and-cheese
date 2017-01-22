@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class ConnectFour{
 
 //    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {0, 0, 0, 0, 0, 0, 2}, {2, 1, 0, 0, 0, 2, 1}, {1, 0, 1, 0, 6, 5, 0}, {1, 0, 0, 1, 4, 5, 0}, {1, 0, 0, 0, 0, 0, 0}, {0, 0, 1, 0, 2, 0, 0} };
+	private int[][] Playboard = { {0, 0, 0, 0, 0, 0, 2}, {0, 0, 0, 0, 0, 0, 1}, {0, 1, 0, 0, 0, 0, 5}, {1, 0, 0, 0, 0, 0, 3}, {1, 0, 0, 0, 0, 0, 3}, {0, 0, 0, 0, 0, 0, 6} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -266,26 +266,67 @@ public class ConnectFour{
 
 
     public int findTwo(){
-	int twoInARow = -1;
-	for(int x = 0; x < 6; x++){//Finds two in the same column
-	    for(int q = 0; q < 5; q++){
-		if(Playboard[x][q]!= 0 && Playboard[x][q]== Playboard[x][q+1] && Playboard[x][q+2]==0){
-		    twoInARow = x;
-		}
-	    }
-	}
-
-	/*for(int x = 0; x < 5; x++){
-	    for(int q = 0; q < 6; q++){
-			if(Playboard[x][q]!= 0 && Playboard[x][q]==Playboard[x+1][q] && Playboard[x+2][q]){
-				if(x==0 && Playboard[x+3][q]==0 && Playboard[x+3][q+1] != 0){
-					twoInARow = x+3;
+		int twoInARow = -1;
+		for(int x = 0; x < 6; x++){
+			for(int q = 6; q > 2; q--){
+				if(Playboard[x][q]!= 0 && Playboard[x][q]==Playboard[x][q-1] && Playboard[x][q-2]==0){
+					twoInARow = x;
 				}
 			}
+		}
 		
-	    }
-	} */
+		for(int q = 6; q > -1; q--){
+			if(Playboard[0][q]!=0 && Playboard[1][q]==Playboard[0][q] && Playboard[2][q]==0){
+				if(q==6){
+					twoInARow = 2;
+				}
+				else{
+					if(Playboard[2][q+1]!=0){
+						twoInARow = 2;
+					}
+		
+				}
+			}
 
+		}
+
+		
+		for(int q = 6; q > -1; q--){
+			if(Playboard[5][q]!=0 && Playboard[5][q]==Playboard[4][q] && Playboard[3][q]==0){
+				if(q==6){
+					twoInARow = 3;
+				}
+				else{
+					if(Playboard[3][q+1]!=0){
+						twoInARow = 3;
+					}
+				}
+			} 
+		}
+		
+		for(int q = 6; q > -1; q--){
+			for(int x = 1; x < 4; x++){
+				if(Playboard[x][q]!=0 && Playboard[x][q]==Playboard[x+1][q]){
+					if(Playboard[x-1][q]==0){
+						if(q==6){
+							twoInARow = x-1;
+						}
+						else if(Playboard[x-1][q+1]!=0){
+							twoInARow = x-1;
+						}
+					}
+					else if(Playboard[x+2][q]==0){
+						if(q==6){
+							twoInARow = x+2;
+						}
+						else if(Playboard[x+2][q+1]!=0){
+							twoInARow = x+2;
+						}
+					}
+				}
+			
+			}
+		}
 
 	return twoInARow;
 
@@ -296,7 +337,7 @@ public class ConnectFour{
     public static void main(String[] args){
 		ConnectFour stuff = new ConnectFour();
 		System.out.println(stuff);
-		System.out.println(stuff.findThree());
+		System.out.println(stuff.findTwo());
     
     }
 
