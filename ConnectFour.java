@@ -3,8 +3,8 @@ import java.util.ArrayList;
 
 public class ConnectFour{
 
-//    private int[][] Playboard = new int[6][7];
-	private int[][] Playboard = { {0, 0, 0, 0, 0, 0, 2}, {0, 0, 0, 0, 0, 0, 1}, {0, 1, 0, 0, 0, 0, 5}, {1, 0, 0, 0, 0, 0, 3}, {1, 0, 0, 0, 0, 0, 3}, {0, 0, 0, 0, 0, 0, 6} };
+    private int[][] Playboard = new int[6][7];
+//	private int[][] Playboard = { {0, 0, 0, 0, 0, 0, 2}, {0, 0, 0, 0, 0, 0, 1}, {0, 1, 0, 0, 0, 0, 5}, {1, 0, 0, 0, 0, 0, 3}, {1, 0, 0, 0, 0, 0, 3}, {0, 0, 0, 0, 0, 0, 6} };
     private boolean Victory = false;
     private int[] Available = new int[6];
     private int winner = 0;
@@ -77,8 +77,21 @@ public class ConnectFour{
 	}
 
     public void computerMove(){
-	int y = (int) (Math.random() * 6);
-	this.place(y, 2);
+	int y = this.findThree();
+	int x = this.findTwo();
+	int u = 0;
+	for(int f = 0; f < 6; f++){
+		if(Playboard[f][0]==0){
+			u =f; 
+		}
+	}
+	if(y!= -1){
+		u = y;
+	}
+	else if(x!= -1){
+		u = x;
+	}
+	this.place(u, 2);
     }
 	
 
