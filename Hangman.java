@@ -47,11 +47,14 @@ public class Hangman {
                 //System.out.println(x);
                 //System.out.println(word.substring(x, x+1));
                 if (word.substring(x, x + 1).equals( guess)){
-                    System.out.println("Congratulations, that letter is in the word");
                     inWord = false;
                     playerLetters.set(x, guess);
 
                 }
+            }
+            
+            if (!(inWord)){
+                System.out.println("Congratulations, that letter is in the word");
             }
             
             if (win()) {
