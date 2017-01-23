@@ -99,6 +99,7 @@ public class ConnectFour{
 	public static boolean play(){
 		System.out.println("You are 1, the computer is 2");
 		ConnectFour pencil = new ConnectFour();
+		System.out.println(pencil);
 		String turn = "1";
 		while(pencil.Victory == false){
 		    if(turn == "1"){
