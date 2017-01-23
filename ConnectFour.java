@@ -152,7 +152,7 @@ public class ConnectFour{
 			}
 		}
 		
-		
+		if(answer==false){
 		for(int q = 0; q < 3; q++){//Row win
 			for(int x = 0; x<7; x++){
 				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x] && Playboard[q][x]==Playboard[q+2][x] && Playboard[q][x]==Playboard[q+3][x]){
@@ -163,7 +163,9 @@ public class ConnectFour{
 			}
 			
 		}
+		}
 		
+		if(answer==false){
 		for(int q = 0; q < 3; q++){//Diagonal up
 			for(int x = 6; x > 2; x-- ){
 				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x-1] && Playboard[q][x]==Playboard[q+2][x-2] && Playboard[q][x]==Playboard[q+3][x-3]){
@@ -173,7 +175,9 @@ public class ConnectFour{
 				}
 			}
 		}
+		}
 		
+		if(answer==false){
 		for(int q = 0; q < 3; q++){//Diagonal down
 			for(int x = 0; x < 4; x++){
 				if(Playboard[q][x] != 0 && Playboard[q][x]==Playboard[q+1][x+1] &&Playboard[q][x]==Playboard[q+2][x+2] && Playboard[q][x]==Playboard[q+3][x+3]){
@@ -183,7 +187,7 @@ public class ConnectFour{
 				}
 			}
 		}
-		
+		}
 		
 		
 		return answer;
