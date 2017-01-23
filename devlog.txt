@@ -23,22 +23,23 @@ OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 Merging files in the command terminal
 Creating a Cards.java and combining the classes
-Learning to read a txt file in a java file
+Learning to read a txt file in a java file, omg this took ridiculously long.  Had to consult like 4 different internet sources till finally got a senior to help us out.
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-blah blah pesky bug...
-maybe some of these will move into the Obs.Ovrcm section...
+When dealer gets an Ace, it asks player for input to determine value
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-We learned how to read a text file from java code and how to set a timer.
+We learned how to read a text file from java code
+We also learned the importance of communication, and planning beforehand
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 we changed ___ to ___ bc...
 
-We got rid of a lot of games in our casino, but we brought back russian rouletter and hangman because we had extra time. 
+We got rid of a lot of games in our casino, but we brought back russian roulette and hangman because we had extra time.
+We had originally planned for Cards to have more methods, then we got into conflict over what the methods would return, how they would work, etc, so we ended up just putting them into our own code
 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -126,4 +127,14 @@ Despoina :: finishing up ConnectFour
 --------------------------------------------------------------
 Tina :: commented out the java files, checked for bugs
 Max :: worked on hangman
+==============================================================
+2017-01-22
+--------------------------------------------------------------
+Tina :: Making sure UML and code reflects same things
+Max :: Finally fricking figured out how to read a file into java, it took a ridiculously large amount of time, what the heck.  Once that worked, finished up with Hangman.
+==============================================================
+2017-01-23
+--------------------------------------------------------------
+Tina :: Making flow charts, testing code, incorporating hangman into Woo.java
+Max :: As the deadline is fast approaching, slowly going through code, making sure it matches UML diagrams, checking comments, making sure the develop is okay, that code is function, and that nothing is missing.
 ==============================================================
