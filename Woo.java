@@ -24,6 +24,7 @@ public class Woo{
 	s += "3. HighLow: You each get a card, but you don't see the dealer's card. You can only see your card. You bet how ever much money you want for who has the higher card.\n";
 	s += "4. Russian Roulette: Spin a 6 cartridge revolver and place it against your head and press the trigger.  If you fire with a blank, you're safe, and win three times your bet.  But if you die, you lose everything and the game ends\n";
 	s += "5. Hangman: You have 6 tries to guess the letters of a word";
+    s += "Press 9 to check your balance";
 	System.out.println(s);
 
 	//user chooses game
@@ -97,6 +98,9 @@ public class Woo{
 		loseMoney();
 	    }
 	}
+        else if (gameType == 9){
+            System.out.println("Your current balance is $" + balance + ".");
+        }
         if (balance > 0.0){
 	    System.out.println("Your current balance is $" + balance + ".");
 	    replay();
@@ -117,7 +121,7 @@ public class Woo{
 	    System.out.println("Thanks for playing! Come back soon!");
 	    System.exit(0);
 	}
-	s = "How much do you want to bet? (ex: 3.00)";
+	s = "How much do you want to bet? (ex: 3.00) (enter 0 if checking balance)";
 	System.out.println(s);
 	bet = Keyboard.readDouble();
 	if (bet > balance){
@@ -176,6 +180,9 @@ public class Woo{
 		loseMoney();
 	    }
 	}
+        else if (gameType == 9){
+            System.out.println("Your current balance is $" + balance + ".");
+        }
         if (balance > 0.0){
 	    replay();
 	}
