@@ -7,6 +7,8 @@ public class RussianRoulette{
 	System.out.println(". . .");
 	System.out.println(". .");
 	System.out.println(".");
+
+	//random chance of winning 
 	if ((int) (Math.random() * 6) > 1){
 	    System.out.println("Whew! You're safe! Congratulations!");
 	    return true;

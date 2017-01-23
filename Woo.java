@@ -8,10 +8,14 @@ public class Woo{
     private double bet;
     
     public void play(){
+
+	//description
 	String s = "";
 	s += "Hello, Welcome to the Mac and Cheese Casino.\n";
 	s += "How much money do you want to start with? Enter initial amount. (Ex: 30.00)\n";
 	System.out.println(s);
+
+	//user input
 	balance = Keyboard.readDouble();
 	s = "You will an option of 3 games to play: Connect 4, BlackJack, and HighLow.\n";
 	s += "Desciption:\n";
@@ -20,12 +24,18 @@ public class Woo{
 	s += "3. HighLow: You each get a card, but you don't see the dealer's card. You can only see your card. You bet how ever much money you want for who has the higher card.\n";
 	s += "4. Russian Roulette: Spin a 6 cartridge revolver and place it against your head and press the trigger.  If you fire with a blank, you're safe, and win three times your bet.  But if you die, you lose everything and the game ends";
 	System.out.println(s);
+
+	//user chooses game
 	s = "Pick the number of the game you want to play. \n";
 	System.out.println(s);
 	gameType = Keyboard.readInt();
+
+	//user chooses how much to bet
 	s = "\nHow much do you want to bet? (ex: 3.00)";
 	System.out.println(s);
 	bet = Keyboard.readDouble();
+
+	//case for when amount entered is greater than the balance
 	while (bet > balance){
 	    System.out.println("You don't have enough money. Enter another number.");
 	    bet = Keyboard.readDouble();
@@ -67,6 +77,7 @@ public class Woo{
         }
 
 	else if (gameType == 4){
+	    System.out.println("Warning, if you lose you lose everything.");
 	    if (RussianRoulette.play()){
 		winMoney();
 		winMoney();
@@ -86,6 +97,7 @@ public class Woo{
 	}
     }
 
+    //continues the game after one game is done
     public void replay(){
 	String s;
 	s = "Pick the number of the game you want to play. (Or press 0 to leave the Casino)\n";
@@ -155,10 +167,12 @@ public class Woo{
 	}
     }
 
+    // subtracts bet from balance
     public void loseMoney(){
 	balance -= bet;
     }
     
+    //adds bet to balance
     public void winMoney(){
 	balance += bet;
     }
