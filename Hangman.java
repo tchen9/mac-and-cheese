@@ -36,10 +36,8 @@ public class Hangman {
         System.out.println("What letter would you like to guess?");
         while (tries < 6){
             String guess = Keyboard.readString();
-            if (for (String x: playerGuesses){
-                x == guess;
-            }){
-                System.out.println("Sorry, you already guessed that letter!");
+            if (playerGuesses.contains(guess)){
+                System.out.println("Sorry, you already guessed that letter! Guess another");
                 guess = Keyboard.readString();
             }
             playerGuesses.add(0, guess);
