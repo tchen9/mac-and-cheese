@@ -17,12 +17,13 @@ public class Woo{
 
 	//user input
 	balance = Keyboard.readDouble();
-	s = "You will an option of 3 games to play: Connect 4, BlackJack, and HighLow.\n";
+	s = "You will an option of 3 games to play: Connect 4, BlackJack, HighLow, and Hangman.\n";
 	s += "Desciption:\n";
 	s += "1. Connect 4: Play against the computer and try to get four in a row.Your pieces will be 1's and the computer's pieces will be 8's.\n";
 	s += "2. Black Jack: You will get 2 cards and an option to get another card. The computer will also get 2 cards and if there cards are below 16 they have to draw another one. Whoever has cards closest to 21 will win.\n";
 	s += "3. HighLow: You each get a card, but you don't see the dealer's card. You can only see your card. You bet how ever much money you want for who has the higher card.\n";
-	s += "4. Russian Roulette: Spin a 6 cartridge revolver and place it against your head and press the trigger.  If you fire with a blank, you're safe, and win three times your bet.  But if you die, you lose everything and the game ends";
+	s += "4. Russian Roulette: Spin a 6 cartridge revolver and place it against your head and press the trigger.  If you fire with a blank, you're safe, and win three times your bet.  But if you die, you lose everything and the game ends\n";
+	s += "5. Hangman: You have 6 tries to guess the letters of a word";
 	System.out.println(s);
 
 	//user chooses game
@@ -88,6 +89,14 @@ public class Woo{
 		System.exit(0);
 	    }
         }
+	else if (gameType == 5){
+	    if (Hangman.play()){
+		winMoney();
+	    }
+	    else{
+		loseMoney();
+	    }
+	}
         if (balance > 0.0){
 	    System.out.println("Your current balance is $" + balance + ".");
 	    replay();
@@ -159,6 +168,14 @@ public class Woo{
 		System.exit(0);
 	    }
         }
+	else if (gameType == 5){
+	    if (Hangman.play()){
+		winMoney();
+	    }
+	    else{
+		loseMoney();
+	    }
+	}
         if (balance > 0.0){
 	    replay();
 	}
