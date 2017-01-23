@@ -12,8 +12,9 @@ public class HighLow extends Cards{
 
     public boolean playHelp(){
 
-	createDeck();
-	
+	createDeck();//from Cards.java
+
+	//picks a random card
 	dealerCard = deck.get((int) (Math.random() * 52));
         playerCard = deck.get((int) (Math.random() * 52));
 
@@ -34,6 +35,7 @@ public class HighLow extends Cards{
 
 	int maxCard = Math.max((int)dealerCard, (int)playerCard);
 
+	//cases for each bet
 	if (bet == 1){
 	    if ((int)dealerCard == (int)playerCard){
 		System.out.println("It was a tie!!!"); 

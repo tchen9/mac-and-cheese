@@ -9,6 +9,7 @@ public class ConnectFour{
     private int[] Available = new int[6];
     private int winner = 0;
 
+    //creates a board with 0 in each slot
     public void  connectFour(){
 	for(int[] q: Playboard){
 	    for(int r: q){
@@ -16,16 +17,18 @@ public class ConnectFour{
 	    }
 	}
     }
-
-	
-	public void populate(){
-		for(int r = 0; r < 6; r++){
-			for(int q = 0; q < 7; q++){
-				Playboard[r][q] = q;
-			}
-		}
+    
+    //used for testing purposes
+    //fills board up with 1-6
+    public void populate(){
+	for(int r = 0; r < 6; r++){
+	    for(int q = 0; q < 7; q++){
+		Playboard[r][q] = q;
+	    }
 	}
+    }
 
+    //prints out the board for the user to see
     public String toString(){
 	String answer = "";
 	for(int r = 0; r < 7; r++){
@@ -36,7 +39,8 @@ public class ConnectFour{
 	}
 	return answer;
     }
-	
+
+    //places the pieces
     private int[] place(int column, int player){
         int[] answer = new int[2];
 	int r = 0;
@@ -76,6 +80,7 @@ public class ConnectFour{
 		return answer;
 	}
 
+    //determines next computer move using AI
     public void computerMove(){
 	int y = this.findThree();
 	int x = this.findTwo();
@@ -139,7 +144,8 @@ public class ConnectFour{
 		Available = new int[6];
 		winner = 0;
 	}
-	
+    
+    //checks to see if there is a four in a row
 	public boolean isGameOver(){
 		boolean answer = false;
 		for(int[] q: Playboard){ //Tests columns
@@ -193,26 +199,8 @@ public class ConnectFour{
 		return answer;
 	}
 
-	
-	
-    /*	public int findThree(){//Doesn't work
-		int threeInARow = 0;
-		for (int x = 0; x < Playboard.length; x++){
-			for (int y = 0; y < Playboard[0].length; y++){
-				while (threeInARow != 3){
-					if (Playboard[x][y] == 1){
-					threeInARow++;
-					}
-				}
-				if (threeInARow == 3 && y < 5){
-					return y + 1; 
-				}
-			}
-			threeInARow = 0;
-		}
-		return 10;
-		}*/
-
+    //AI for the computer so that it find three in row to place its next move
+    //returns the value of the index of the next move
     public int findThree(){
 	int threeInARow = -1;
 	for(int x = 0; x < 6; x++){
@@ -283,6 +271,8 @@ public class ConnectFour{
     }
 
 
+    //AI for the computer to find two in a row so it can place its moves strategically
+    //returns index of next move
     public int findTwo(){
 		int twoInARow = -1;
 		for(int x = 0; x < 6; x++){

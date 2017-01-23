@@ -4,13 +4,7 @@ Max Chan
 Despoina Sparakis
 pd 1
 ---------------------
-<Project>
-
-
-Suggested usage: 
-* Replace all fields, angle brackets included, with specified info.
-  eg, pd <pd#> --> pd 3
-* Delete these instructions once all teammates understand usage.
+Casino
 
 devlog--
 Use keyboard shortcut to jump to end,
@@ -27,8 +21,9 @@ Flesh out each category whenever necessary, appropriate.
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-merging files in the command terminal
-creating a Cards.java and combining the classes
+Merging files in the command terminal
+Creating a Cards.java and combining the classes
+Learning to read a txt file in a java file
 
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -125,4 +120,10 @@ Tina :: updated devlog
 Tina :: update the flow.pdf
 Max :: update the uml.pdf
 Despoina :: finishing up ConnectFour
+==============================================================
+
+2017-01-21
+--------------------------------------------------------------
+Tina :: commented out the java files, checked for bugs
+Max :: worked on hangman
 ==============================================================
