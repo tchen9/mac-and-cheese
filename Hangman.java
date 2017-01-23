@@ -55,7 +55,9 @@ public class Hangman {
             }
             
             if (win()) {
-                System.out.println("Congratulations! You guessed the word! You win!");
+                System.out.println("Congratulations! You guessed the word, ");
+                System.out.println(word);
+                System.out.println("! You win!");
                 return true;
             }
             
@@ -70,7 +72,8 @@ public class Hangman {
             System.out.println("Guess Again");
         }
         
-        System.out.println("Sorry, you didn't guess the word.  Better luck next time!");
+        System.out.println("Sorry, you didn't guess the word. The word was ");
+        System.out.println(word);
         return false;
     }
 
